@@ -1,0 +1,5 @@
+/snap/clion/209/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/209/bin/ninja/linux/ninja -DCMAKE_C_COMPILER=/usr/bin/cc -DCMAKE_CXX_COMPILER=/usr/bin/c++ -G Ninja -S /home/qiwentao/CLionProjects/untitled -B /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default
+/home/qiwentao/build_libs/lib/libyaml-cpp.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default

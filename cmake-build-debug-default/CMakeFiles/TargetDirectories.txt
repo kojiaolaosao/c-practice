@@ -1,0 +1,7 @@
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/untitled.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/segTree.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/a.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/fact.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/test.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/edit_cache.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/rebuild_cache.dir
