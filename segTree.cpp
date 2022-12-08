@@ -32,7 +32,7 @@ void solve() {
 
     cout<<name(name)<<":";
 
-    YAML::Node yaml = YAML::LoadFile("../config.yaml");
+    YAML::Node yaml = YAML::LoadFile("../config/config.yaml");
     cout << yaml["name"].as<string>() << endl;
     cout << yaml["age"].as<int>() << endl;
 }

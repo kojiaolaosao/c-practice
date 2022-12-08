@@ -3,5 +3,12 @@
 /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/a.dir
 /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/fact.dir
 /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/test.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/tm.dir
 /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/edit_cache.dir
 /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/CMakeFiles/rebuild_cache.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/jdbc/CMakeFiles/Jdbc.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/jdbc/CMakeFiles/edit_cache.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/jdbc/CMakeFiles/rebuild_cache.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest/CMakeFiles/classTest.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest/CMakeFiles/edit_cache.dir
+/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest/CMakeFiles/rebuild_cache.dir

@@ -47,12 +47,12 @@ cmake_ninja_workdir = /home/qiwentao/CLionProjects/untitled/cmake-build-debug-de
 #############################################
 # Order-only phony target for untitled
 
-build cmake_object_order_depends_target_untitled: phony || CMakeFiles/untitled.dir
+build cmake_object_order_depends_target_untitled: phony || cmake_object_order_depends_target_classTest
 
 build CMakeFiles/untitled.dir/main.cpp.o: CXX_COMPILER__untitled_Debug /home/qiwentao/CLionProjects/untitled/main.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles/untitled.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++2a
-  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp
+  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp -I/home/qiwentao/build_libs/mysqljdbc/include -I/home/qiwentao/CLionProjects/untitled/classtest
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir
 
@@ -64,8 +64,9 @@ build CMakeFiles/untitled.dir/main.cpp.o: CXX_COMPILER__untitled_Debug /home/qiw
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o | classtest/libclassTest.so /home/qiwentao/build_libs/lib/libyaml-cpp.so || classtest/libclassTest.so
   FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest:/home/qiwentao/build_libs/lib  classtest/libclassTest.so  /home/qiwentao/build_libs/lib/libyaml-cpp.so
   OBJECT_DIR = CMakeFiles/untitled.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -79,12 +80,12 @@ build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/ma
 #############################################
 # Order-only phony target for segTree
 
-build cmake_object_order_depends_target_segTree: phony || CMakeFiles/segTree.dir
+build cmake_object_order_depends_target_segTree: phony || cmake_object_order_depends_target_classTest
 
 build CMakeFiles/segTree.dir/segTree.cpp.o: CXX_COMPILER__segTree_Debug /home/qiwentao/CLionProjects/untitled/segTree.cpp || cmake_object_order_depends_target_segTree
   DEP_FILE = CMakeFiles/segTree.dir/segTree.cpp.o.d
   FLAGS = -g -std=gnu++2a
-  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp
+  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp -I/home/qiwentao/build_libs/mysqljdbc/include -I/home/qiwentao/CLionProjects/untitled/classtest
   OBJECT_DIR = CMakeFiles/segTree.dir
   OBJECT_FILE_DIR = CMakeFiles/segTree.dir
 
@@ -96,9 +97,9 @@ build CMakeFiles/segTree.dir/segTree.cpp.o: CXX_COMPILER__segTree_Debug /home/qi
 #############################################
 # Link the executable segTree
 
-build segTree: CXX_EXECUTABLE_LINKER__segTree_Debug CMakeFiles/segTree.dir/segTree.cpp.o | /home/qiwentao/build_libs/lib/libyaml-cpp.so
+build segTree: CXX_EXECUTABLE_LINKER__segTree_Debug CMakeFiles/segTree.dir/segTree.cpp.o | classtest/libclassTest.so /home/qiwentao/build_libs/lib/libyaml-cpp.so || classtest/libclassTest.so
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/qiwentao/build_libs/lib  /home/qiwentao/build_libs/lib/libyaml-cpp.so
+  LINK_LIBRARIES = -Wl,-rpath,/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest:/home/qiwentao/build_libs/lib  classtest/libclassTest.so  /home/qiwentao/build_libs/lib/libyaml-cpp.so
   OBJECT_DIR = CMakeFiles/segTree.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -112,12 +113,12 @@ build segTree: CXX_EXECUTABLE_LINKER__segTree_Debug CMakeFiles/segTree.dir/segTr
 #############################################
 # Order-only phony target for a
 
-build cmake_object_order_depends_target_a: phony || CMakeFiles/a.dir
+build cmake_object_order_depends_target_a: phony || cmake_object_order_depends_target_classTest
 
 build CMakeFiles/a.dir/a.cpp.o: CXX_COMPILER__a_Debug /home/qiwentao/CLionProjects/untitled/a.cpp || cmake_object_order_depends_target_a
   DEP_FILE = CMakeFiles/a.dir/a.cpp.o.d
   FLAGS = -g -std=gnu++2a
-  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp
+  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp -I/home/qiwentao/build_libs/mysqljdbc/include -I/home/qiwentao/CLionProjects/untitled/classtest
   OBJECT_DIR = CMakeFiles/a.dir
   OBJECT_FILE_DIR = CMakeFiles/a.dir
 
@@ -129,8 +130,9 @@ build CMakeFiles/a.dir/a.cpp.o: CXX_COMPILER__a_Debug /home/qiwentao/CLionProjec
 #############################################
 # Link the executable a
 
-build a: CXX_EXECUTABLE_LINKER__a_Debug CMakeFiles/a.dir/a.cpp.o
+build a: CXX_EXECUTABLE_LINKER__a_Debug CMakeFiles/a.dir/a.cpp.o | classtest/libclassTest.so /home/qiwentao/build_libs/lib/libyaml-cpp.so || classtest/libclassTest.so
   FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest:/home/qiwentao/build_libs/lib  classtest/libclassTest.so  /home/qiwentao/build_libs/lib/libyaml-cpp.so
   OBJECT_DIR = CMakeFiles/a.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -144,19 +146,19 @@ build a: CXX_EXECUTABLE_LINKER__a_Debug CMakeFiles/a.dir/a.cpp.o
 #############################################
 # Order-only phony target for fact
 
-build cmake_object_order_depends_target_fact: phony || CMakeFiles/fact.dir
+build cmake_object_order_depends_target_fact: phony || cmake_object_order_depends_target_classTest
 
 build CMakeFiles/fact.dir/factMain.cpp.o: CXX_COMPILER__fact_Debug /home/qiwentao/CLionProjects/untitled/factMain.cpp || cmake_object_order_depends_target_fact
   DEP_FILE = CMakeFiles/fact.dir/factMain.cpp.o.d
   FLAGS = -g -std=gnu++2a
-  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp
+  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp -I/home/qiwentao/build_libs/mysqljdbc/include -I/home/qiwentao/CLionProjects/untitled/classtest
   OBJECT_DIR = CMakeFiles/fact.dir
   OBJECT_FILE_DIR = CMakeFiles/fact.dir
 
 build CMakeFiles/fact.dir/fact.cpp.o: CXX_COMPILER__fact_Debug /home/qiwentao/CLionProjects/untitled/fact.cpp || cmake_object_order_depends_target_fact
   DEP_FILE = CMakeFiles/fact.dir/fact.cpp.o.d
   FLAGS = -g -std=gnu++2a
-  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp
+  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp -I/home/qiwentao/build_libs/mysqljdbc/include -I/home/qiwentao/CLionProjects/untitled/classtest
   OBJECT_DIR = CMakeFiles/fact.dir
   OBJECT_FILE_DIR = CMakeFiles/fact.dir
 
@@ -168,8 +170,9 @@ build CMakeFiles/fact.dir/fact.cpp.o: CXX_COMPILER__fact_Debug /home/qiwentao/CL
 #############################################
 # Link the executable fact
 
-build fact: CXX_EXECUTABLE_LINKER__fact_Debug CMakeFiles/fact.dir/factMain.cpp.o CMakeFiles/fact.dir/fact.cpp.o
+build fact: CXX_EXECUTABLE_LINKER__fact_Debug CMakeFiles/fact.dir/factMain.cpp.o CMakeFiles/fact.dir/fact.cpp.o | classtest/libclassTest.so /home/qiwentao/build_libs/lib/libyaml-cpp.so || classtest/libclassTest.so
   FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest:/home/qiwentao/build_libs/lib  classtest/libclassTest.so  /home/qiwentao/build_libs/lib/libyaml-cpp.so
   OBJECT_DIR = CMakeFiles/fact.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -183,12 +186,12 @@ build fact: CXX_EXECUTABLE_LINKER__fact_Debug CMakeFiles/fact.dir/factMain.cpp.o
 #############################################
 # Order-only phony target for test
 
-build cmake_object_order_depends_target_test: phony || CMakeFiles/test.dir
+build cmake_object_order_depends_target_test: phony || cmake_object_order_depends_target_classTest
 
 build CMakeFiles/test.dir/classtest/test.cpp.o: CXX_COMPILER__test_Debug /home/qiwentao/CLionProjects/untitled/classtest/test.cpp || cmake_object_order_depends_target_test
   DEP_FILE = CMakeFiles/test.dir/classtest/test.cpp.o.d
   FLAGS = -g -std=gnu++2a
-  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp
+  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp -I/home/qiwentao/build_libs/mysqljdbc/include -I/home/qiwentao/CLionProjects/untitled/classtest
   OBJECT_DIR = CMakeFiles/test.dir
   OBJECT_FILE_DIR = CMakeFiles/test.dir/classtest
 
@@ -200,13 +203,47 @@ build CMakeFiles/test.dir/classtest/test.cpp.o: CXX_COMPILER__test_Debug /home/q
 #############################################
 # Link the executable test
 
-build test: CXX_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/classtest/test.cpp.o
+build test: CXX_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/classtest/test.cpp.o | classtest/libclassTest.so /home/qiwentao/build_libs/lib/libyaml-cpp.so || classtest/libclassTest.so
   FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest:/home/qiwentao/build_libs/lib  classtest/libclassTest.so  /home/qiwentao/build_libs/lib/libyaml-cpp.so  -lmysqlclient
   OBJECT_DIR = CMakeFiles/test.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = test
   TARGET_PDB = test.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tm
+
+
+#############################################
+# Order-only phony target for tm
+
+build cmake_object_order_depends_target_tm: phony || cmake_object_order_depends_target_classTest
+
+build CMakeFiles/tm.dir/test_mysql.cpp.o: CXX_COMPILER__tm_Debug /home/qiwentao/CLionProjects/untitled/test_mysql.cpp || cmake_object_order_depends_target_tm
+  DEP_FILE = CMakeFiles/tm.dir/test_mysql.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp -I/home/qiwentao/build_libs/mysqljdbc/include -I/home/qiwentao/CLionProjects/untitled/classtest
+  OBJECT_DIR = CMakeFiles/tm.dir
+  OBJECT_FILE_DIR = CMakeFiles/tm.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tm
+
+
+#############################################
+# Link the executable tm
+
+build tm: CXX_EXECUTABLE_LINKER__tm_Debug CMakeFiles/tm.dir/test_mysql.cpp.o | classtest/libclassTest.so /home/qiwentao/build_libs/lib/libyaml-cpp.so /home/qiwentao/build_libs/mysqljdbc/lib64/libmysqlcppconn.so /usr/local/lib/libboost_json.so || classtest/libclassTest.so
+  FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest:/home/qiwentao/build_libs/lib:/home/qiwentao/build_libs/mysqljdbc/lib64:/usr/local/lib  classtest/libclassTest.so  /home/qiwentao/build_libs/lib/libyaml-cpp.so  /home/qiwentao/build_libs/mysqljdbc/lib64/libmysqlcppconn.so  /usr/local/lib/libboost_json.so
+  OBJECT_DIR = CMakeFiles/tm.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = tm
+  TARGET_PDB = tm.dbg
 
 
 #############################################
@@ -233,7 +270,145 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/qiwentao/CLionProjects/untitled/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target Jdbc
+
+
+#############################################
+# Order-only phony target for Jdbc
+
+build cmake_object_order_depends_target_Jdbc: phony || cmake_object_order_depends_target_classTest
+
+build jdbc/CMakeFiles/Jdbc.dir/JdbcHelper.cpp.o: CXX_COMPILER__Jdbc_Debug /home/qiwentao/CLionProjects/untitled/jdbc/JdbcHelper.cpp || cmake_object_order_depends_target_Jdbc
+  DEFINES = -DJdbc_EXPORTS
+  DEP_FILE = jdbc/CMakeFiles/Jdbc.dir/JdbcHelper.cpp.o.d
+  FLAGS = -g -fPIC -std=gnu++2a
+  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp -I/home/qiwentao/build_libs/mysqljdbc/include -I/home/qiwentao/CLionProjects/untitled/jdbc -I/home/qiwentao/CLionProjects/untitled/classtest
+  OBJECT_DIR = jdbc/CMakeFiles/Jdbc.dir
+  OBJECT_FILE_DIR = jdbc/CMakeFiles/Jdbc.dir
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target Jdbc
+
+
+#############################################
+# Link the shared library jdbc/libJdbc.so
+
+build jdbc/libJdbc.so: CXX_SHARED_LIBRARY_LINKER__Jdbc_Debug jdbc/CMakeFiles/Jdbc.dir/JdbcHelper.cpp.o | classtest/libclassTest.so /home/qiwentao/build_libs/lib/libyaml-cpp.so || classtest/libclassTest.so
+  LANGUAGE_COMPILE_FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest:/home/qiwentao/build_libs/lib  classtest/libclassTest.so  /home/qiwentao/build_libs/lib/libyaml-cpp.so
+  OBJECT_DIR = jdbc/CMakeFiles/Jdbc.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libJdbc.so
+  SONAME_FLAG = -Wl,-soname,
+  TARGET_FILE = jdbc/libJdbc.so
+  TARGET_PDB = Jdbc.so.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build jdbc/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/jdbc && /snap/clion/209/bin/cmake/linux/bin/ccmake -S/home/qiwentao/CLionProjects/untitled -B/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build jdbc/edit_cache: phony jdbc/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build jdbc/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/jdbc && /snap/clion/209/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/qiwentao/CLionProjects/untitled -B/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build jdbc/rebuild_cache: phony jdbc/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/qiwentao/CLionProjects/untitled/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target classTest
+
+
+#############################################
+# Order-only phony target for classTest
+
+build cmake_object_order_depends_target_classTest: phony || classtest/CMakeFiles/classTest.dir
+
+build classtest/CMakeFiles/classTest.dir/test.cpp.o: CXX_COMPILER__classTest_Debug /home/qiwentao/CLionProjects/untitled/classtest/test.cpp || cmake_object_order_depends_target_classTest
+  DEFINES = -DclassTest_EXPORTS
+  DEP_FILE = classtest/CMakeFiles/classTest.dir/test.cpp.o.d
+  FLAGS = -g -fPIC -std=gnu++2a
+  INCLUDES = -I/home/qiwentao/build_libs/include/yaml-cpp -I/home/qiwentao/build_libs/mysqljdbc/include -I/home/qiwentao/CLionProjects/untitled/classtest
+  OBJECT_DIR = classtest/CMakeFiles/classTest.dir
+  OBJECT_FILE_DIR = classtest/CMakeFiles/classTest.dir
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target classTest
+
+
+#############################################
+# Link the shared library classtest/libclassTest.so
+
+build classtest/libclassTest.so: CXX_SHARED_LIBRARY_LINKER__classTest_Debug classtest/CMakeFiles/classTest.dir/test.cpp.o | /home/qiwentao/build_libs/lib/libyaml-cpp.so
+  LANGUAGE_COMPILE_FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/qiwentao/build_libs/lib  /home/qiwentao/build_libs/lib/libyaml-cpp.so
+  OBJECT_DIR = classtest/CMakeFiles/classTest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libclassTest.so
+  SONAME_FLAG = -Wl,-soname,
+  TARGET_FILE = classtest/libclassTest.so
+  TARGET_PDB = classTest.so.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build classtest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest && /snap/clion/209/bin/cmake/linux/bin/ccmake -S/home/qiwentao/CLionProjects/untitled -B/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build classtest/edit_cache: phony classtest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build classtest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest && /snap/clion/209/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/qiwentao/CLionProjects/untitled -B/home/qiwentao/CLionProjects/untitled/cmake-build-debug-default
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build classtest/rebuild_cache: phony classtest/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
+
+build Jdbc: phony jdbc/libJdbc.so
+
+build classTest: phony classtest/libclassTest.so
+
+build libJdbc.so: phony jdbc/libJdbc.so
+
+build libclassTest.so: phony classtest/libclassTest.so
 
 # =============================================================================
 # Folder targets.
@@ -243,7 +418,21 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default
 
-build all: phony untitled segTree a fact test
+build all: phony untitled segTree a fact test tm jdbc/all classtest/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/classtest
+
+build classtest/all: phony classtest/libclassTest.so
+
+# =============================================================================
+
+#############################################
+# Folder: /home/qiwentao/CLionProjects/untitled/cmake-build-debug-default/jdbc
+
+build jdbc/all: phony jdbc/libJdbc.so
 
 # =============================================================================
 # Built-in targets
@@ -252,14 +441,14 @@ build all: phony untitled segTree a fact test
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../classtest/CMakeLists.txt ../jdbc/CMakeLists.txt /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../classtest/CMakeLists.txt ../jdbc/CMakeLists.txt /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
 
 
 #############################################
